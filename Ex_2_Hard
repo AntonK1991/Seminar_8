@@ -29,8 +29,8 @@ MixArray(int[,] array)
         }
         else
         {
-          if (i!=0) randomRow = randomRow-1;
-          else randomRow = randomRow+1;
+          if (i==0) randomRow = randomRow+1;
+          if (i==array.GetLength(0)-1) randomRow = randomRow-1;
         }
       }
     }
