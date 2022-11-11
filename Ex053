@@ -29,12 +29,12 @@ int n = array.GetLength(0)-1;
 int temp = 0;
 for (int j<0; j<array.GetLength(1); j++)
   {
-    for (int i<0; i<array.GetLength(0); i++)
-      {
-      temp = array[i,j];
-      array [i,j] = array [n;j];
+    //for (int i<0; i<array.GetLength(0); i++)
+      //{
+      temp = array[0,j];
+      array [0,j] = array [n;j];
       array [n,j] = temp;
-      }
+      //}
   }
 return array;
 }
@@ -52,8 +52,9 @@ for (int i=0; i<array.GetLength(0); i++)
 
 int row = Input ("Введите количество строк массива: ");
 int col = Input ("Введите количество столбцов массива: ");
-int [,] startList = CreateFillArray (row, col);
-PrintArray (startList);
-int [,] resultList = ArrayRowsReplace (startList);
-PrintArray (resultList)
+int [,] List = CreateFillArray (row, col);
+PrintArray (List);
+//int [,] resultList = 
+ArrayRowsReplace (List);
+PrintArray (List)
   
