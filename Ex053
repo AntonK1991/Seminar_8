@@ -4,7 +4,7 @@ int Input (string data)
 {
 Console.WriteLine (data); 
 int n = ConvertTo.Int32(Console.ReadLine ());
-if (n<=0) Console.WriteLine ("Значение должно быть больше 0")
+if (n<=0||n!=int) Console.WriteLine ("Значение должно быть больше 0")
 return n;
 }
 
