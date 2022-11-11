@@ -8,13 +8,6 @@ if (n<=0) Console.WriteLine ("Значение должно быть больш�
 return n;
 }
 
-int row = Input ("Введите количество строк массива: ");
-int col = Input ("Введите количество столбцов массива: ");
-int [,] startList = CreateFillArray (row, col);
-PrintArray (startList);
-int [,] resultList = ArrayRowsReplace (startList);
-PrintArray (resultList)
-
 int [,] CreateFillArray (int row, int col)
 {
 int [,] array = int new array [row, col];
@@ -45,7 +38,7 @@ for (int j<0; j<array.GetLength(1); j++)
   }
 return array;
 }
-  
+
 void PrintArray (int [,] array)
 {
 for (int i=0; i<array.GetLength(0); i++)
@@ -56,4 +49,11 @@ for (int i=0; i<array.GetLength(0); i++)
     }
   }
 }
+
+int row = Input ("Введите количество строк массива: ");
+int col = Input ("Введите количество столбцов массива: ");
+int [,] startList = CreateFillArray (row, col);
+PrintArray (startList);
+int [,] resultList = ArrayRowsReplace (startList);
+PrintArray (resultList)
   
