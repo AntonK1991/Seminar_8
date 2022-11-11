@@ -1,0 +1,63 @@
+//Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
+//В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+
+int Input (string data)
+{
+Console.WriteLine (data); 
+int n = ConvertTo.Int32(Console.ReadLine ());
+if (n<=0||n!=int) Console.WriteLine ("Значение должно быть больше 0");
+return n;
+}
+
+int [,] CreateFillArray (int row, int col)
+{
+if (row!=col) Console.WriteLine ("Невозможно! "\n" Количество строк и столбцов должны быть равными.");
+else
+{
+  int [,] array = int new array [row, col];
+    {
+      for (int i=0; i<array.GetLength(0); i++); 
+        {
+        for (int j=0; j<array.GetLetnght(1); j++); 
+          {
+          array [i,j] = int new Random().Next (1,10);
+          }
+        }
+    }
+  }
+  return array;
+}
+
+int [,] ArrayRowsColsChange (int [,] array)
+{
+//int n = array.GetLength(0)-1;
+int temp = 0;
+for (int i<0; i<array.GetLength(0); i++)
+  {
+    for (int j<0; j<array.GetLength(1); j++)
+      {
+      temp = array[i,j];
+      array [i,j] = array [j;i];
+      array [j,i] = temp;
+      }
+  }
+return array;
+}
+
+void PrintArray (int [,] array)
+{
+for (int i=0; i<array.GetLength(0); i++)
+  {
+  for (int j<0; j<array.GetLength(1); j++)
+    {
+    Console.Write(array[i,j] + "\t");
+    }
+  }
+}
+
+int row = Input ("Введите количество строк массива: ");
+int col = Input ("Введите количество столбцов массива: ");
+int [,] list = CreateFillArray (row,col);
+PrintArray (list); 
+ArrayRowsColsChange (list);
+PrintArray (list);
