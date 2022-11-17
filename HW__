@@ -1,3 +1,48 @@
+//1. Создать репозиторий на GitHub
+//2. Нарисовать блок-схему алгоритма (можно обойтись блок-схемой основной содержательной части, если вы выделяете её в отдельный метод)
+//3. Снабдить репозиторий оформленным текстовым описанием решения (файл README.md)
+//4. Написать программу, решающую поставленную задачу
+//5. Использовать контроль версий в работе над этим небольшим проектом (не должно быть так, что всё залито одним коммитом, 
+//как минимум этапы 2, 3, и 4 должны быть расположены в разных коммитах)
+
+//Задача: Написать программу, которая из имеющегося массива строк формирует новый массив из строк, длина которых меньше, либо равна 3 символам. 
+//Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
+//лучше обойтись исключительно массивами.
+
+Console.WriteLine("Введите количество элементов массива: "); 
+int amount = Convert.ToInt32(Console.ReadLine());
+string [] List = new int array [amount];
+string [] newList  = new int array [amount];
+
+
+string [] InputArrayElements (string [] array)
+for (i=0, i<array.Length, i++) 
+  {
+  Console.WriteLine($"Введите {i+1} элемент массива: "); 
+  array [i] = Console.ReadLine())
+  }
+  return array;
+
+string [] TransferElements (string [] array1, string [] array2)
+for (i=0, i<array.Length, i++) 
+{
+  if (array1[n].Length <= 3) 
+    {
+    for (j=0, j<array.Length, j++)
+    array2[j] = array1[n]
+    }
+    return array2;
+}
+
+void PrintArray (string [] array, n=0) 
+{
+  Console.Write ($"{array[n]}, ");
+  if array[n] == string "" return 0; 
+  else return PrintArray (string [] array, n++); 
+}
+
+
+
 string str = "abcdefg";
 Console.WriteLine("1) The length of '{0}' is {1}", str, str.Length);
 Console.WriteLine("2) The length of '{0}' is {1}", "xyz", "xyz".Length);
