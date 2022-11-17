@@ -13,9 +13,14 @@ Console.WriteLine("Введите количество элементов мас
 int amount = Convert.ToInt32(Console.ReadLine());
 string [] List = new int array [amount];
 InputArrayElements(List);
-string [] newList  = new int array [CheckDesiredElement(List)];
-TransferElements(List, newList);
-PrintArray(newList, 0);
+int amount2 = CheckDesiredElement(List); 
+if (amount2 == 0) Console.WriteLine ("Отстуствуют элементы массива, отвечающие критериям поиска!"); 
+else 
+{
+  string [] newList  = new int array [amount2];
+  TransferElements(List, newList);
+  PrintArray(newList, 0);
+}
 
 
 string [] InputArrayElements (string [] array)
