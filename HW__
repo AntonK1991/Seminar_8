@@ -9,27 +9,34 @@
 //Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 //лучше обойтись исключительно массивами.
 
-Console.WriteLine("Введите количество элементов массива: "); 
-int amount = Convert.ToInt32(Console.ReadLine());
+ 
+int amount = InputArrayLength("Введите количество элементов массива: ");
 string [] List = new int array [amount];
 InputArrayElements(List);
 int amount2 = CheckDesiredElement(List); 
 if (amount2 == 0) Console.WriteLine ("Отстуствуют элементы массива, отвечающие критериям поиска!"); 
-else 
+else string [] newList = new int array [amount2];
+TransferElements(List, newList);
+PrintArray(newList, 0);
+
+
+int InputArrayLength (string data); 
 {
-  string [] newList  = new int array [amount2];
-  TransferElements(List, newList);
-  PrintArray(newList, 0);
+  Console.WriteLine(data);
+  int count = Convert.ToInt32(Console.ReadLine()); 
+  if (count > 0) return count;  
+  else return InputArrayLength ("Значение должно быть больше 0! Повторите ввод: ");
 }
 
-
 string [] InputArrayElements (string [] array)
-for (i=0, i<array.Length, i++) 
+{
+  for (i=0, i<array.Length, i++) 
   {
-  Console.WriteLine($"Введите {i+1} элемент массива: "); 
-  array [i] = Console.ReadLine())
+    Console.WriteLine($"Введите {i+1}-й элемент массива: "); 
+    array [i] = Console.ReadLine())
   }
   return array;
+}
 
 int CheckDesiredElement (string[] array)
 {
@@ -55,12 +62,23 @@ string [] TransferElements (string [] array1, string [] array2)
 
 void PrintArray (string [] array, int startNum) 
 {
-  Console.Write ($"{array[startNum]}, ");
+  Console.Write ($""{array[startNum]}", ");
   if startNum == array.Length return 0; 
   else return PrintArray (string [] array, startNum++); 
 }
 
 
+Алгоритм для README
+Текстовое описание решения задачи: 
+1. Создание метода для ввода количества элементов с проверкой введенного количества элементов (значение должно быть больше 0) с применением рекурсии. 
+2. Создание исходного массива, длина которого равняется введенному значению.  
+3. Создание метода для заполнения массива пользователем с клавиатуры с приминением цикла for.
+4. Создание метода для определения количества строк в массиве, состоящих из 3 и меньше символов, для определения длины нового массива. 
+Цикл for c условием длины строки <= 3 символам.
+5. Условие - если количество элементов (по предыдущему пункту) равно 0 - вывод сообщения об отсутствии искомых элементов. 
+Если больше нуля - создание нового массива с соответствующей длиной. 
+6. Создание метода для перевода искомых строк из заданного массива в новый. 
+Создание метода для вывода найденных элементов в консоль с применением рекурсии. 
 
 //string str = "abcdefg";
 //Console.WriteLine("1) The length of '{0}' is {1}", str, str.Length);
